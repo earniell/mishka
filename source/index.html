@@ -3,10 +3,121 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
-
-  </body>
-</html>
+    <header class="page-header">
+      <nav class="main-nav">
+        <button class="menu-toggle" type="button">открыть меню</button>
+        <img class="logo" src="img/logo.svg" width="" height="" alt="логотип магазина вязанных вещей «Мишка»">
+        <ul class="main-menu">
+          <li class="main-menu__menu-item"><a class="main-menu__menu-link" href="catalog.html">Каталог товаров</a></li>
+          <li class="main-menu__menu-item"><a class="main-menu__menu-link" href="#">Вязание на заказ</a></li>
+          <li class="main-menu__menu-item"><a class="main-menu__menu-link" href="#">Поиск по сайту</a></li>
+          <li class="main-menu__menu-item"><a class="main-menu__menu-link" href="#">Корзина: пока пуста</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="page-main">
+      <section class="page-title">
+        <h1 class="page-title__title">Милые штуки ручной работы для дома</h1>
+      </section>
+      <section class="interior-items">
+       <h2 class="interior-items__title">Предметы интерьера</h2>
+     </section>
+     <section class="toys">
+       <h2 class="toys__title">Детские игрушки</h2>
+     </section>
+     <section class="week-goods">
+       <h2 class="week-goods__title">Вязанные корзинки</h2>
+       <span class="week-goods__mark">Товар недели</span>
+       <p class="week-goods__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
+       <table class="week-goods__table">
+         <tr class="week-goods__table-row">
+           <td class="week-goods__parameter">Цвет:</td>
+           <td class="week-goods__value">«Тиффани»/серый</td>
+         </tr>
+         <tr>
+           <td class="week-goods__parameter">Диаметр:</td>
+           <td class="week-goods__value">25 см</td>
+         </tr>
+         <tr>
+           <td class="week-goods__parameter">Высота:</td>
+           <td class="week-goods__value">15 см</td>
+         </tr>
+       </table>
+       <img class="week-goods__img" src="" alt="на вытянутых руках, в ладошках, лежат три вязанных корзинки">
+       <p class="week-goods__price">Цена: 990 руб.</p>
+       <a class="button week-goods__button-order" href="#">Заказать</a>
+     </section>
+     <section class="about">
+       <h2 class="about__title">Коротко о нас</h2>
+       <ul class="about__list">
+         <li class="about__list-item">Экологически чистые материалы</li>
+         <li class="about__list-item">Скандинавский стиль по российской цене</li>
+         <li class="about__list-item">Увеличивает лайки на фотографиях</li>
+         <li class="about__list-item">Связано вручную с любовью и умилением</li>
+         <li class="about__list-item">Поддержка отечественного производителя</li>
+         <li class="about__list-item">Поставляется в подарочной упаковке</li>
+       </ul>
+     </section>
+     <section class="reviews">
+       <h2 class="reviews__title">Отзывы</h2>
+       <ul class="reviews__list">
+         <li class="reviews__list-item">
+           <blockquote class="reviews__blog blog">
+             <p class="blog__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
+             <cite class="blog__author">Анастасия Красильникова</cite>
+             <cite class="blog__nikname">
+               <a class="blog__nikname-link" href="#">@misssssiskras</a>
+             </cite>
+           </blockquote>
+         </li>
+         <li class="reviews__list-item"></li>
+         <li class="reviews__list-item"></li>
+       </ul>
+       <a class="reviews__button-back" href="">Назад</a>
+       <a class="reviews__button-next" href="">Вперед</a>
+       <a class="button reviews__button-feedback" href="">Написать</a>
+     </section>
+     <section class="contacts">
+       <h2 class="contacts__title">Контакты</h2>
+       <article class="address">
+         <h2 class="address__title visually-hidden">Адрес</h2>
+         <address>
+           <table class="address__table">
+             <tr class="address__table-row">
+               <td class="address__parameter">e-mail:</td>
+               <td class="address__value">info@mimimishkashop.ru</td>
+             </tr>
+             <tr>
+               <td class="address__parameter">адрес:</td>
+               <td class="address__value">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</td>
+             </tr>
+           </table>
+         </address>
+       </article>
+       <article class="map">
+         <h2 class="map__title visually-hidden">Карта</h2>
+         <iframe class="map__container" src=""></iframe>
+         <img class="map__background" src="" alt="карта с адресом магазина: г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101 ">
+       </article>
+       <a class="button contacts__button-feedback" href="#">Напишите нам</a>
+     </section>
+     </main>
+     <footer class="page-footer">
+       <section class="social">
+         <h2 class="social__title visually-hidden">Соц. сети</h2>
+         <ul class="social__list">
+           <li class="social__list-item"><a class="social__link" href="#">Instagramm</a></li>
+           <li class="social__list-item"><a class="social__link" href="#">Facebook</a></li>
+           <li class="social__list-item"><a class="social__link" href="#">Twitter</a></li>
+         </ul>
+       </section>
+       <section class="copyright">
+         <h2 class="copyright__title">Разработано</h2>
+         <a class="copyright__link" href=""><img src="" width="" height="" alt="логотип HTML academy"> HTML academy</a>
+       </section>
+     </footer>
+    </body>
+  </html>
