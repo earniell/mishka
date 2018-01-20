@@ -7,25 +7,30 @@
   </head>
   <body>
     <header class="page-header">
+    <div class="center">
       <nav class="main-nav">
-        <img class="logo" src="img/logo.svg" width="" height="" alt="логотип магазина вязанных вещей «Мишка»">
-        <button class="menu-toggle" type="button">открыть меню</button>
-        <ul class="main-menu">
-          <li class="main-menu__menu-item"><a class="main-menu__menu-link" href="catalog.html">Каталог товаров</a></li>
-          <li class="main-menu__menu-item"><a class="main-menu__menu-link" href="#">Вязание на заказ</a></li>
-          <li class="main-menu__menu-item"><a class="main-menu__menu-link" href="#">Поиск по сайту</a></li>
-          <li class="main-menu__menu-item"><a class="main-menu__menu-link" href="#">Корзина: пока пуста</a></li>
+        <button class="main-nav__toggle" type="button">открыть меню</button>
+        <a class="main-nav__logo-link" href="">
+          <img class="main-nav__logo" src="img/logo.svg" width="" height="" alt="логотип магазина вязанных вещей «Мишка»">
+        </a>
+        <ul class="main-nav__list menu">
+          <li class="menu__item"><a class="menu__link" href="catalog.html">Каталог товаров</a></li>
+          <li class="menu__item"><a class="menu__link" href="form.html">Вязание на заказ</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Поиск по сайту</a></li>
+          <li class="menu__item"><a class="menu__link" href="#">Корзина: пока пуста</a></li>
         </ul>
       </nav>
+    </div>
     </header>
     <main class="page-main">
+    <div class="center">
       <section class="page-title">
         <h1 class="page-title__title">Вязание на заказ</h1>
       </section>
       <section class="form-section">
-        <h2 class="form-section__title visually-hidden">Форма для заказа</h2>
+        <h2 class="visually-hidden">Форма для заказа</h2>
         <p class="form-section__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
-        <form class="form" action="https://echo.htmlacademy.ru" method="get">
+        <form class="form-section__form form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="form__item form-type">
             <legend class="form-type__name">Тип</legend>
               <ul class="form-type__list">
@@ -91,24 +96,41 @@
                 <label class="form-personal__label" for="second-name">Отчество:</label>
                 <input class="form-personal__text" type="text" id="second-name" name="second-name" placeholder="Отчество, если желаете">
               </li>
+            </ul>
           </fieldset>
+          <fieldset class="form__item phone">
+            <legend>Тел</legend>
+            <input type="tel" name="phone" placeholder="+7 XXX XX XX*" pattern="/+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required>
+          </fieldset>
+          <fieldset class="form__item e-mail">
+            <legend>E-mail</legend>
+            <input type="email" name="e-mail" placeholder="Ваш e-mail*" required>
+          </fieldset>
+          <fieldset class="form__item additional">
+            <legend>Доп</legend>
+            <textarea rows="" cols="" name="additional-text" placeholder="Опишите все Ваши пожелания к заказу"></textarea>
+          </fieldset>
+          <small>*Поля обязательны для заполнения</small>
           <button class="button form__submit" type="submit">Отправить заказ</button>
         </form>
       </section>
+    </div>
     </main>
     <footer class="page-footer">
-     <section class="social">
-       <h2 class="social__title visually-hidden">Соц. сети</h2>
-       <ul class="social__list">
-         <li class="social__list-item"><a class="social__link" href="#">Instagramm</a></li>
-         <li class="social__list-item"><a class="social__link" href="#">Facebook</a></li>
-         <li class="social__list-item"><a class="social__link" href="#">Twitter</a></li>
-       </ul>
-     </section>
-     <section class="copyright">
-       <h2 class="copyright__title">Разработано</h2>
-       <a class="copyright__link" href=""><img src="" width="" height="" alt="логотип HTML academy"> HTML academy</a>
-     </section>
+    <div class="center">
+      <section class="page-footer__item social">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="social__list">
+          <li class="social__list-item"><a class="social__link" href="#">Instagramm</a></li>
+          <li class="social__list-item"><a class="social__link" href="#">Facebook</a></li>
+          <li class="social__list-item"><a class="social__link" href="#">Twitter</a></li>
+        </ul>
+      </section>
+      <section class="page-footer__item copyright">
+        <h2 class="copyright__title">Разработано</h2>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img src="" width="" height="" alt="логотип HTML academy"> HTML academy</a>
+      </section>
+    </div>
     </footer>
   </body>
 </html>
