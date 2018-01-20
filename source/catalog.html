@@ -81,17 +81,17 @@
     <section class="modal">
       <h2 class="modal__title">Добавить в корзину</h2>
       <p class="modal__text">Выберите размер:</p>
-      <form class="modal__cart-add cart-add">
+      <form class="modal__cart-add cart-add" method="get" action="https://echo.htmlacademy.ru">
         <label>
-          <input class="cart-add__radio" type="radio" name="" value="size">
+          <input class="cart-add__radio" type="radio" name="size" value="size-S">
           <span class="cart-add__indicator">S</span>
         </label>
         <label>
-          <input class="cart-add__radio" type="radio" name="" value="size">
+          <input class="cart-add__radio" type="radio" name="size" value="size-M">
           <span class="cart-add__indicator">M</span>
         </label>
         <label>
-          <input class="cart-add__radio" type="radio" name="" value="size">
+          <input class="cart-add__radio" type="radio" name="size" value="size-L">
           <span class="cart-add__indicator">L</span>
         </label>
         <button class="button cart-add__button" type="submit">Добавить</button>
