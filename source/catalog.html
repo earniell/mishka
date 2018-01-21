@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;subset=cyrillic" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;subset=cyrillic" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
-    <div class="center">
+      <div class="center">
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">открыть меню</button>
         <a class="main-nav__logo-link" href="">
@@ -20,50 +20,60 @@
           <li class="menu__item"><a class="menu__link" href="#">Корзина: пока пуста</a></li>
         </ul>
       </nav>
-    </div>
+      </div>
     </header>
     <main class="page-main">
-    <div class="center">
+      <div class="center">
       <section class="page-title">
         <h1 class="page-title__title">Милые штуки ручной работы для дома</h1>
       </section>
       <section class="catalog">
         <ul class="catalog__list">
           <li class="catalog__item">
-            <a class="catalog__link" href="#">
-              <img class="catalog__img" src="" width="" height="" alt="вязанный зайчик в светло-голубой одежде">
-              <h3 class="catalog__item-title">Зайчик-попрыгайчик</h3>
-              <p class="catalog__item-info">Рост 30 см, вес 200 г</p>
-            </a>
-            <a class="catalog__price-link" href="#"><p class="catalog__price">1200 руб.</p></a>
+            <article class="card-product">
+              <a class="card-product__img-link" href="#">
+                <img class="card-product__img" src="" width="" height="" alt="вязанный зайчик в светло-голубой одежде">
+                <h3 class="card-product__title">Зайчик-попрыгайчик</h3>
+                <p class="card-product__info">Рост 30 см, вес 200 г</p>
+              </a>
+              <p class="card-product__price">1200 руб.</p>
+              <a class="card-product__price-link" href="#">Добавить в корзину</a>
+          </article>
           </li>
           <li class="catalog__item">
-            <a class="catalog__link" href="#">
-              <img class="catalog__img" src="" width="" height="" alt="вязанная корзинка для белья в розово-белой гамме">
-              <h3 class="catalog__item-title">Корзинка для белья</h3>
-              <p class="catalog__item-info">Диаметр 15 см, высота 10 см</p>
-            </a>
-            <a class="catalog__price-link" href="#"><p class="catalog__price">690 руб.</p></a>
+            <article class="card-product">
+              <a class="card-product__img-link" href="#">
+                <img class="card-product__img" src="" width="" height="" alt="вязанная корзинка для белья в розово-белой гамме">
+                <h3 class="card-product__title">Корзинка для белья</h3>
+                <p class="card-product__info">Диаметр 15 см, высота 10 см</p>
+              </a>
+              <p class="card-product__price">690 руб.</p>
+              <a class="card-product__price-link" href="#">Добавить в корзину</a>
+            </article>
           </li>
           <li class="catalog__item">
-            <a class="catalog__link" href="#">
-              <img class="catalog__img" src="" width="" height="" alt="вязанная корзинка в светло-зеленой-белой гамме, внутри несколько мягких игрушек">
-              <h3 class="catalog__item-title">Большая корзинка для игрушек</h3>
-              <p class="catalog__item-info">Диаметр 30 см, высота 30 см</p>
-            </a>
-            <a class="catalog__price-link" href="#"><p class="catalog__price">1500 руб.</p></a>
+            <article class="card-product">
+              <a class="card-product__img-link" href="#">
+                <img class="card-product__img" src="" width="" height="" alt="вязанная корзинка в светло-зеленой-белой гамме, внутри несколько мягких игрушек">
+                <h3 class="card-product__title">Большая корзинка для игрушек</h3>
+                <p class="card-product__info">Диаметр 30 см, высота 30 см</p>
+              </a>
+              <p class="card-product__price">1500 руб.</p>
+              <a class="card-product__price-link" href="#">Добавить в корзину</a>
+            </article>
           </li>
         </ul>
       </section>
       <section class="video-blog">
-        <video class="video-blog__item" controls=""></video>
+        <h2 class="video-blog__title">Процесс производства</h2>
+        <video class="video-blog__item" src="" poster="" width="" height="" controls></video>
         <p class="video-blog__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-        <a class="video-blog__link" href="#">Сделать заказ</a>
+        <a class="button video-blog__link" href="#">Сделать заказ</a>
       </section>
-    </div>
+      </div>
     </main>
     <footer class="page-footer">
-    <div class="center">
+      <div class="center">
       <section class="page-footer__item social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social__list">
@@ -76,22 +86,22 @@
         <h2 class="copyright__title">Разработано</h2>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img src="" width="" height="" alt="логотип HTML academy"> HTML academy</a>
       </section>
-    </div>
+      </div>
     </footer>
     <section class="modal">
       <h2 class="modal__title">Добавить в корзину</h2>
       <p class="modal__text">Выберите размер:</p>
       <form class="modal__cart-add cart-add" method="get" action="https://echo.htmlacademy.ru">
         <label>
-          <input class="cart-add__radio" type="radio" name="size" value="size-S">
+          <input class="cart-add__radio" id="size-S" type="radio" name="size" value="size-S">
           <span class="cart-add__indicator">S</span>
         </label>
         <label>
-          <input class="cart-add__radio" type="radio" name="size" value="size-M">
+          <input class="cart-add__radio" id="size-M" type="radio" name="size" value="size-M">
           <span class="cart-add__indicator">M</span>
         </label>
         <label>
-          <input class="cart-add__radio" type="radio" name="size" value="size-L">
+          <input class="cart-add__radio" id="size-L" type="radio" name="size" value="size-L">
           <span class="cart-add__indicator">L</span>
         </label>
         <button class="button cart-add__button" type="submit">Добавить</button>
