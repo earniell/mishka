@@ -24,8 +24,8 @@
     </header>
     <main class="page-main">
       <div class="center">
-      <section class="page-title">
-        <h1 class="page-title__title">Вязание на заказ</h1>
+      <section class="page-main__item">
+        <h1 class="page-main__title">Вязание на заказ</h1>
       </section>
       <section class="form-section">
         <h2 class="visually-hidden">Форма для заказа</h2>
@@ -36,12 +36,10 @@
               <ul class="form-type__list">
                 <li class="form-type__list-item">
                   <input class="form-type__radio" id="accessory" type="radio" name="type" value="interior-accessory">
-                  <span class="form-type__radio-indicator"></span>
                   <label class="form-type__label" for="accessory">Аксессуар для интерьера</label>
                 </li>
                 <li class="form-type__list-item">
                   <input class="form-type__radio" id="toy" type="radio" name="type" value="kids-toy">
-                  <span class="form-type__radio-indicator"></span>
                   <label class="form-type__label" for="toy">Детская игрушка</label>
                 </li>
               </ul>
@@ -51,32 +49,26 @@
             <ul class="form-color__list">
               <li class="form-color__list-item">
                 <input class="form-color__checkbox" type="checkbox" id="white" name="color-white">
-                <span class="form-color__checkbox-indicator"></span>
                 <label class="form-color__label" for="white">Белый</label>
               </li>
               <li class="form-color__list-item">
                 <input class="form-color__checkbox" type="checkbox" id="grey" name="color-grey">
-                <span class="form-color__checkbox-indicator"></span>
                 <label class="form-color__label" for="grey">Серый</label>
               </li>
               <li class="form-color__list-item">
                 <input class="form-color__checkbox" type="checkbox" id="tiffany" name="color-tiffany">
-                <span class="form-color__checkbox-indicator"></span>
                 <label class="form-color__label" for="tiffany">"Тиффани"</label>
               </li>
               <li class="form-color__list-item">
                 <input class="form-color__checkbox" type="checkbox" id="black" name="color-black">
-                <span class="form-color__checkbox-indicator"></span>
                 <label class="form-color__label" for="black">Черный</label>
               </li>
               <li class="form-color__list-item">
                 <input class="form-color__checkbox" type="checkbox" id="pink" name="color-pink">
-                <span class="form-color__checkbox-indicator"></span>
                 <label class="form-color__label" for="pink">Розовый</label>
               </li>
               <li class="form-color__list-item">
                 <input class="form-color__checkbox" type="checkbox" id="orange" name="color-orange">
-                <span class="form-color__checkbox-indicator"></span>
                 <label class="form-color__label" for="orange">Оранжевый</label>
               </li>
             </ul>
@@ -99,15 +91,15 @@
             </ul>
           </fieldset>
           <fieldset class="form__item phone">
-            <legend>Тел</legend>
+            <legend class="phone__name">Тел</legend>
             <input type="tel" name="phone" placeholder="+7 XXX XX XX*" pattern="/+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required> <!-- проблема с pattern -->
           </fieldset>
           <fieldset class="form__item e-mail">
-            <legend>E-mail</legend>
+            <legend class="e-mail__name">E-mail</legend>
             <input type="email" name="e-mail" placeholder="Ваш e-mail*" required>
           </fieldset>
           <fieldset class="form__item additional">
-            <legend>Доп</legend>
+            <legend class="additional__name">Доп</legend>
             <textarea class="additional__text" rows="" cols="" name="additional-text" placeholder="Опишите все Ваши пожелания к заказу"></textarea>
           </fieldset>
           <small class="form__required">*Поля обязательны для заполнения</small>
