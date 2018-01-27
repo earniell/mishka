@@ -35,6 +35,6 @@
     "source/less/**/*.less"
   ],
   "engines": {
-    "node": "8.9"
+    "node": "9.4"
   }
 }
