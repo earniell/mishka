@@ -1,3 +1,6 @@
+@tablet-width: 768px;
+@desktop-width: 1200px;
+
 @color-body: white;
 @color-border: #ececec;
 @color-block-base: #63d1bb;
@@ -10,6 +13,7 @@ body {
   margin: 0;
   min-width: 320px;
 }
+
 
 .visually-hidden {
   position: absolute;
@@ -92,16 +96,20 @@ body {
   color: white;
   font-size: 19px;
   line-height: 24px;
+  width: 120px;
 }
 
 .page-main__item {
   margin-bottom: 28px;
 }
 
+.goods-week {
+  margin-bottom: 68px;
+}
 
 .goods-week__title {
   margin: 0;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
   font-weight: 700;
   font-size: 25px;
   line-height: 30px;
@@ -122,7 +130,7 @@ body {
 
 .goods-week__description {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
@@ -130,16 +138,34 @@ body {
 }
 
 .goods-week__table {
+  border-collapse: collapse;
   font-size: 15px;
   line-height: 20px;
   font-weight: 400;
   margin-bottom: 30px;
 }
 
+.goods-week__parameter {
+  width: 97px;
+  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+
+.goods-week__value {
+  padding: 0;
+  padding-top: 3px;
+}
+
+.goods-week__img {
+  width: 100%;
+  height: auto;
+}
+
 .goods-week__price {
   margin: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 18px;
+  margin-bottom: 26px;
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
@@ -147,10 +173,12 @@ body {
   text-align: center;
 }
 
+
+
 .button {
   display: block;
   box-sizing: border-box;
-  padding: 20px 0;
+  padding: 15px 0;
   text-decoration: none;
   text-align: center;
   border: solid 2px @color-text;
@@ -164,9 +192,13 @@ body {
   color: @color-text;
 }
 
-.about__title,  /* сделать общий класс для section > h2 */
-.reviews__title {
+.about {
+  margin-bottom: 56px;
+}
+
+.about__title  {   /* сделать общий класс для section > h2 */
   margin: 0;
+  margin-bottom: 20px;
   font-size: 25px;
   line-height: 30px;
   font-weight: 700;
@@ -182,7 +214,16 @@ body {
 }
 
 .about__item {
-  padding-top: 60px;  /* для картинок */
+  padding-top: 65px;  /* для картинок */
+  margin-bottom: 18px;
+}
+
+.reviews__title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: 700;
 }
 
 .reviews-slider {
@@ -198,7 +239,7 @@ body {
 
 .blog__text {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 27px;
   font-size: 15px;
   line-height: 30px;
   font-weight: 400;
@@ -206,6 +247,7 @@ body {
 
 .blog__author {
   display: block;
+  margin-bottom: 3px;
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
@@ -223,9 +265,13 @@ body {
   text-decoration: none;
 }
 
+.reviews {
+  margin-bottom: 85px;
+}
+
 .reviews__navigation {
   display: flex;
-  margin-bottom: 30px;
+  margin-bottom: 36px;
 
 }
 
@@ -244,15 +290,21 @@ body {
 
 .contacts__title {
   margin: 0;
+  margin-bottom: 26px;
   font-size: 18px;
   line-height: 30px;
   font-weight: 700;
 }
 
 .address__item {
+  font-style: normal;
   font-size: 15px;
   line-height: 30px;
   font-weight: 400;
+}
+
+.address__table {
+  border-collapse: collapse;
 }
 
 .address__table-row {
@@ -262,6 +314,8 @@ body {
 
 .address__table-col {
   padding: 0;
+  padding-bottom: 30px;
+  padding-right: 5px;
   width: 70px;
 }
 
@@ -275,7 +329,53 @@ body {
   box-shadow: 0 1px 0 0 @color-block-base;
 }
 
-@media (max-width: 768px) {
+.copyright {
+  display: flex;
+  justify-content: center;
+}
+
+.copyright__link {
+  font-size: 0;
+}
+
+.copyright__title {
+  margin-right: 30px;
+  font-size: 19px;
+  line-height: 19px;
+  font-weight: 700;
+}
+
+.map {
+  margin-bottom: 38px;
+}
+
+.contacts__button-feedback {
+  color: @color-text;
+}
+
+.page-footer {
+  background-color: #f1f1f1;
+}
+
+.social__list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.social__link {
+  font-size: 0;
+}
+
+.social__link-insta--color-monochrome {
+  fill: #231F20;
+}
+
+
+
+@media (max-width: @tablet-width) {
 
 .center {
   margin: 0 auto;
@@ -293,8 +393,9 @@ body {
 .main-nav__logo-link {
   display: block;
   text-align: center;
+  padding-top: 22px;
   padding-bottom: 17px;
-  border-bottom: solid 1px @color-border;
+  /*border-bottom: solid 1px @color-border;*/
 }
 
 .main-nav__toggle {
@@ -307,7 +408,7 @@ body {
   background-image: url("../img/icon-menu-open.svg");
   background-repeat: no-repeat;
   position: absolute;
-  right: 0;
+  right: 30px;
   top: 32px;
 }
 
@@ -321,15 +422,16 @@ body {
   line-height: 24px;
 }
 
-.main-nav__logo-link {
-  padding-top: 22px;
-}
 
 .menu__item {
   text-align: center;
   padding-top: 22px;
   padding-bottom: 16px;
   border-bottom: solid 1px @color-border;
+}
+
+.manu__item:first-child {
+  border-top: solid 1px @color-border;
 }
 
 .menu__link {
@@ -345,7 +447,26 @@ body {
   min-height: 103px;
 }
 
+.map__online {
+  border: none;
+  width: 100%;
+}
+
+.map__offline {
+  width: 100%;
+}
+
+.page-footer__logo-link {
+  display: none;
+}
+
 }
 
 
+@media (min-width: @tablet-width) {
 
+}
+
+@media (min-width: @desktop-width) {
+
+}
