@@ -97,9 +97,9 @@ body {
 }
 
 .page-title--color {
-  min-height: 177px;
+  min-height: 175px;
   background-color: #f1f1f1;
-  margin-bottom: 30px; /*  куда-нибудь потом в другое место !*/
+  margin-bottom: 22px; /*  куда-нибудь потом в другое место !*/
 }
 
 .page-menu {
@@ -489,10 +489,12 @@ body {
 
 .form-section__text {
   margin: 0;
+  margin-bottom: 24px;
 }
 
 .form__item {
   border: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -501,6 +503,7 @@ body {
 }
 
 .form__name {
+  padding: 0;
   font-size: @base-font-size;
   line-height: 16px;
   font-weight: @bold;
@@ -520,10 +523,42 @@ body {
 }
 
 .form__required {
-  font-size: @base-font-size;
-  line-height: 30px;
-  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: @normal;
+  color: @color-text;
 }
+
+.form__radio {
+  display: none;
+}
+
+.form__label {
+  position: relative;
+}
+
+.form__radio + .form__label::before {
+  position: absolute;
+  content: "";
+  width: 35px;
+  height: 35px;
+  left: 0;
+  top: -8px;
+  border: 2px solid @color-text;
+  border-radius: 50%;
+}
+
+.form__radio:checked + .form__label::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  left: 12px;
+  top: 4px;
+  background-color: @color-block-base;
+  border-radius: 50%;
+}
+
 
 .form__submit {
   background-color: transparent;
@@ -630,12 +665,12 @@ body {
     position: relative;
     padding-top: 26px;
     padding-bottom: 26px;
-    padding-left: 25%;
+    padding-left: 75px;
   }
 
   .menu__icon {
     position: absolute;
-    left: 9%;
+    left: 30px;
   }
 
   .page-menu__items {
@@ -776,9 +811,27 @@ body {
   }
 
   .form__label {
+    display: block;
+    width: 170px;
+    padding-left: 63px;
     font-size: @base-font-size;
     line-height: 18px;
     font-weight: @bold;
+  }
+
+  .form__name {
+    position: relative;
+    margin-bottom: 34px;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 8px;
+      left: 60px;
+      width: 200px;
+      height: 1px;
+      background-color: @color-block-base;
+    }
   }
 
   .form input,
@@ -792,8 +845,20 @@ body {
   }
 
   .form__required {
-    font-size: 14px;
-    line-height: 16px;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .form__list-item--margin-bottom {
+    margin-bottom: 24px;
+  }
+
+  .form-type {
+    margin-bottom: 20px;
+  }
+
+  .additional {
+    margin-bottom: 30px;
   }
 }
 
@@ -849,12 +914,13 @@ body {
     width: 265px;
   }
 
-  .menu,
   .menu-user {
     display: flex;
+  }
+
+  .menu {
+    display: flex;
     font-size: 15px;
-    line-height: @base-line-height;
-    font-weight: @bold;
   }
 
   .main-nav__logo-link {
