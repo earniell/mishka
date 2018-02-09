@@ -99,7 +99,7 @@ body {
 .page-title--color {
   min-height: 177px;
   background-color: #f1f1f1;
-  margin-bottom: 30px; /*  куда-нибудь потом в другое место !*/
+  margin-bottom: 20px; /*  куда-нибудь потом в другое место !*/
 }
 
 .page-menu {
@@ -493,6 +493,7 @@ body {
 
 .form__item {
   border: none;
+  margin: 0;
   padding: 0;
 }
 
@@ -501,6 +502,7 @@ body {
 }
 
 .form__name {
+  padding: 0;
   font-size: @base-font-size;
   line-height: 16px;
   font-weight: @bold;
@@ -520,10 +522,41 @@ body {
 }
 
 .form__required {
-  font-size: @base-font-size;
-  line-height: 30px;
-  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: @normal;
+  color: @color-text;
 }
+
+.form__radio {
+  display: none;
+}
+
+.form__label {
+  position: relative;
+}
+
+.form__radio + .form__label::before {
+  position: absolute;
+  content: "";
+  width: 36px;
+  height: 36px;
+  left: 0;
+  top: -9px;
+  border: 2px solid @color-text;
+  border-radius: 50%;
+}
+
+.form__radio:checked + .form__label::after {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  left: 12px;
+  top: 3px;
+  background-color: @color-block-base;
+  border-radius: 50%;
+ }
 
 .form__submit {
   background-color: transparent;
@@ -635,7 +668,7 @@ body {
 
   .menu__icon {
     position: absolute;
-    left: 9%;
+    left: 30px;
   }
 
   .page-menu__items {
@@ -772,13 +805,39 @@ body {
   .form-section__text {
     font-size: 13px;
     line-height: @base-line-height;
-    font-weight: 400;
+    font-weight: @normal;
+    margin-bottom: 24px;
   }
 
   .form__label {
+    display: block;
+    width: 170px;
+    padding-left: 63px;
     font-size: @base-font-size;
     line-height: 18px;
     font-weight: @bold;
+  }
+
+  .form__name {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 8px;
+      left: 60px;
+      width: 200px;
+      height: 1px;
+      background-color: @color-block-base;
+    }
+  }
+
+  .type-legend {
+    margin-bottom: 34px;
+  }
+
+  .color-legend {
+    margin-bottom: 12px;
   }
 
   .form input,
@@ -792,9 +851,21 @@ body {
   }
 
   .form__required {
-    font-size: 14px;
-    line-height: 16px;
+    display: block;
+    margin-bottom: 30px;
   }
+
+  .margin-bottom {
+    margin-bottom: 24px;
+  }
+
+  .form-type {
+    margin-bottom: 44px;
+  }
+
+  .additional {
+    margin-bottom: 30px;
+   }
 }
 
 @media (min-width: @tablet-width) {   /* tablet */
@@ -822,6 +893,7 @@ body {
     .center;
     .padding-tab;
     width: 668px;
+    /*height: 90px;*/ /* подумать !!*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -849,16 +921,19 @@ body {
     width: 265px;
   }
 
-  .menu,
+  .menu {
+    display: flex;
+    font-size: 15px;
+  }
+
   .menu-user {
     display: flex;
     font-size: 15px;
-    line-height: @base-line-height;
-    font-weight: @bold;
   }
 
   .main-nav__logo-link {
     order: 1;
+    width: 167px;
   }
 
   .menu-user {
@@ -867,6 +942,14 @@ body {
 
   .menu {
     order: 3;
+  }
+
+  .menu-user__search .menu__icon {
+    margin: 0;
+  }
+
+  .menu-user__search .menu__link {
+    text-align: center;
   }
 
   .main-nav__link {
@@ -882,6 +965,11 @@ body {
 
   .page-title {
     min-height: 525px;
+  }
+
+  .page-title--image {
+    background-image: url("img/hero-tablet@1x.jpg");
+    background-repeat: no-repeat;
   }
 
   .page-main__title,
@@ -907,6 +995,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 668px;
+    margin-bottom: 52px;
   }
 
   .goods-week__mark {
@@ -926,6 +1015,35 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
+
+  .about__item--flower {
+    order: 1;
+  }
+
+  .about__item--money {
+    order: 3;
+  }
+
+  .about__item--heart {
+    order: 5;
+  }
+
+  .about__item--ball {
+    order: 2;
+  }
+
+  .about__item--rocket {
+    order: 4;
+  }
+
+  .about__item--gift {
+    order: 6;
+  }
+
+  .about {
+    margin-bottom: 70px;
+  }
+
 
   .reviews {
     position: relative;
@@ -979,15 +1097,42 @@ body {
     top: 0;
   }
 
+  .address {
+    margin-bottom: 50px;
+  }
+
+  .address__tbody {
+    display: flex;
+  }
+
+  .address__table-value {
+    width: 215px;
+  }
+
+  .contacts__button-feedback {
+    width: 232px;
+    padding: 14px 35px;
+    margin: 0 auto;
+  }
+
+  .contacts {
+    margin-bottom: 55px;
+  }
+
   .page-footer__wrapper {
     display: flex;
+    justify-content: space-between;
   }
 
   .map {
     position: relative;
     margin-bottom: 33px;
     margin-left: -300px;
-    margin-right: -300px;
+    margin-right: -300px; /* подумать!!! */
+  }
+
+  .copyright {
+    padding: 0;
   }
 
   /* каталог товаров */
