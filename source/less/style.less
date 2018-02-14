@@ -507,10 +507,10 @@ body {
 }
 
 .video-blog__control {
-    width: 101px;
-    height: 77px;
-    background-image: url("../img/icon-play.svg");
-    margin: auto;
+  width: 101px;
+  height: 77px;
+  background-image: url("../img/icon-play.svg");
+  margin: auto;
 }
 
 /* форма */
@@ -543,11 +543,11 @@ body {
   text-transform: uppercase;
 }
 
-.form__label {
+/*.form__label {
   font-size: @base-font-size;
   line-height: 18px;
   font-weight: @bold;
-}
+}*/
 
 .form__text {
   position: relative;
@@ -574,7 +574,7 @@ body {
   font-size: @base-font-size;
   line-height: 18px;
   font-weight: @bold;
-  }
+}
 
 .form__radio + .form__label::before {
   position: absolute;
@@ -596,7 +596,7 @@ body {
   top: 3px;
   background-color: @color-block-base;
   border-radius: 50%;
- }
+}
 
 .form__checkbox {
   display: none;
@@ -647,7 +647,7 @@ body {
   padding-left: 15px;
 }
 
-@media (max-width: @tablet-width) {  /* mobile */
+@media (max-width: @tablet-width) { /* mobile */
   .delivery {
     display: none;
   }
@@ -934,7 +934,7 @@ body {
 
   .additional {
     margin-bottom: 30px;
-   }
+  }
 }
 
 @media (min-width: @tablet-width) {   /* tablet */
@@ -1355,6 +1355,7 @@ body {
   }
 
   .form__flex-wrap {
+    display: flex;
     box-sizing: border-box;
     width: @tablet-width;
     .padding-tab;
@@ -1365,10 +1366,10 @@ body {
   .form__item--color-grey {
     background-color: #f1f1f1;
   }
-
+  /*
   .form__flex-wrap {
     display: flex;
-  }
+  }*/
 
   .form-color {
     display: flex;
@@ -1426,12 +1427,12 @@ body {
 }
 
 @media (min-width: @desktop-width) {
-
   .main-nav {
-     width: 1050px;
+    width: 1050px;
     .padding-desktop;
     .center;
   }
+
   .page-main__title {
     width: 1050px;
     .padding-desktop;
@@ -1473,7 +1474,7 @@ body {
   }
 
   .delivery {
-     width: 1050px;
+    width: 1050px;
     .padding-desktop;
     .center;
     margin-bottom: 40px;
@@ -1484,7 +1485,7 @@ body {
   }
 
   .page-menu__list {
-    width:  1050px;
+    width: 1050px;
     .padding-desktop;
     .center;
   }
@@ -1494,7 +1495,7 @@ body {
   }
 
   .goods-week {
-    width:  1050px;
+    width: 1050px;
     .padding-desktop;
     .center;
     margin-bottom: 140px;
@@ -1531,7 +1532,7 @@ body {
   }
 
   .about {
-    width:  1050px;
+    width: 1050px;
     .padding-desktop;
     .center;
     margin-bottom: 80px;
@@ -1543,7 +1544,7 @@ body {
   }
 
   .reviews {
-    width:  1050px;
+    width: 1050px;
     .padding-desktop;
     .center;
     margin-bottom: 80px;
@@ -1565,7 +1566,7 @@ body {
   .contacts {
     display: flex;
     flex-wrap: wrap;
-    width:  1050px;
+    width: 1050px;
     .padding-desktop;
     .center;
     margin-bottom: 80px;
