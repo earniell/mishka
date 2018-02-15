@@ -155,7 +155,7 @@ body {
     position: absolute;
     content: "";
     width: 100px;
-    height: 70px;
+    height: 75px;
     right: 0;
     top: 20px;
     opacity: 0.5;
@@ -165,7 +165,7 @@ body {
 .page-menu__link--interior::after {
   background-image: url("../img/icon-interior.svg");
   background-repeat: no-repeat;
-  background-position: 24px 4px;
+  background-position: 24px 5px;
 }
 
 .page-menu__link--toy::after {
@@ -509,6 +509,10 @@ body {
   font-size: 0;
   text-decoration: none;
   color: black;
+
+    &:active {
+      opacity: 0.3;
+    }
 }
 
 .copyright__title {
@@ -579,15 +583,26 @@ body {
   border: 1px solid @color-border;
 }
 
-.video-blog__title::before {
-  position: absolute;
-  content: "";
-  width: 32px;
-  height: 32px;
-  top: 32px;
-  left: 33px;
-  background-image: url("../img/icon-video.svg");
-  background-repeat: no-repeat;
+.video-blog__title {
+  position: relative;
+  margin: 0;
+  padding-top: 26px;
+  padding-left: 90px;
+  padding-bottom: 25px;
+  font-size: @base-font-size;
+  line-height: @base-line-height;
+  font-weight: @bold;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 32px;
+    height: 32px;
+    top: 32px;
+    left: 33px;
+    background-image: url("../img/icon-video.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .video-blog__item {
@@ -963,17 +978,6 @@ body {
     .center;
   }
 
-  .video-blog__title {
-    position: relative;
-    margin: 0;
-    padding-top: 26px;
-    padding-left: 90px;
-    padding-bottom: 25px;
-    font-size: @base-font-size;
-    line-height: @base-line-height;
-    font-weight: @bold;
-  }
-
   .video-blog__text {
     margin: 0;
     margin-bottom: 25px;
@@ -1126,8 +1130,7 @@ body {
 
   .page-footer__wrapper,
   .about,
-  .reviews,
-  .contacts {
+  .reviews {
     .center;
     .padding-tab;
     width: 668px;
@@ -1137,7 +1140,7 @@ body {
     .center;
     .padding-tab;
     width: 668px;
-    height: 90px; /* подумать !!*/
+    height: 88px; /* подумать !!*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -1178,29 +1181,42 @@ body {
   .main-nav__logo-link {
     order: 1;
     width: 167px;
+    align-self: center;
   }
 
   .menu__link {
     display: flex;
     justify-content: space-between;
-    padding: 30px 15px;
+    padding: 18px 0;
     margin: auto;
   }
 
-  .menu-user__search .menu__icon {
-    margin: 0;
+  .menu-user .menu__icon {
+    margin: auto;
+  }
+
+  .menu-user__search {
+    border-left: 1px solid @color-border;
+    border-right: 1px solid @color-border;
   }
 
   .menu-user__search .menu__link {
-    text-align: center;
+    /*text-align: center;*/
+    padding: 32px 0;
   }
+
+  .menu-user__cart .menu__link {
+    text-align: center;
+    padding-top: 31px;
+  }
+
 
   .menu__text {
     font-size: 0;
   }
 
   .page-title {
-    min-height: 525px;
+    min-height: 624px;
     display: flex;
     flex-direction: column;
   }
@@ -1235,10 +1251,30 @@ body {
     font-weight: @bold;
   }
 
+  .page-main__title {
+    padding-top: 97px;
+  }
+
+  .page-menu {
+    margin-bottom: 48px;
+  }
+
   .page-menu__title {
     font-size: 20px;
     line-height: 30px;
     font-weight: @bold;
+  }
+
+  .page-menu__link {
+    padding-left: 35px;
+  }
+
+  .page-menu__link--interior::after {
+    background-position: 24px 9px;
+  }
+
+  .page-menu__link--toy::after {
+    background-position: 5px 11px;
   }
 
   .goods-week {
@@ -1248,16 +1284,21 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     width: 668px;
-    margin-bottom: 52px;
+    margin-bottom: 116px;
+  }
+
+  .goods-week__title {
+    margin-bottom: 50px;
   }
 
   .goods-week__mark {
     font-size: @base-font-size;
     line-height: 17px;
     font-weight: @bold;
+    align-self: center;
     text-align: center;
     width: 120px;
-    margin-bottom: 0;
+    margin-bottom: 43px;
   }
 
   .goods-week__flex-wrap,
@@ -1266,24 +1307,49 @@ body {
   }
 
   .goods-week__order {
-    margin-top: -40px;
+    margin-top: -25px;
+  }
+
+  .goods-week__description {
+    font-size: @base-font-size;
+    line-height: @base-line-height+6;
+    margin-bottom: 33px;
+  }
+
+  .goods-week__price {
+    font-size: @base-font-size+3;
+    margin-top: 11px;
+    margin-bottom: 34px;
+  }
+
+  .about__title {
+    margin-bottom: 40px;
   }
 
   .about__list {
     display: flex;
     flex-wrap: wrap;
+    font-size: @base-font-size+3;
+    line-height: 22px;
+  }
+
+  .about__item {
+    margin-bottom: 50px;
   }
 
   .about__item--flower {
     order: 1;
+    margin-right: 13px;
   }
 
   .about__item--money {
     order: 3;
+    margin-right: 13px;
   }
 
   .about__item--heart {
     order: 5;
+    margin-right: 13px;
   }
 
   .about__item--ball {
@@ -1299,7 +1365,7 @@ body {
   }
 
   .about {
-    margin-bottom: 70px;
+    margin-bottom: 37px;
   }
 
   .reviews {
@@ -1310,15 +1376,27 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     width: 768px;
-    min-height: 520px;
+    /*min-height: 520px;*/
     margin: 0 auto;
+    margin-bottom: 80px;
+    padding-top: 76px;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
   }
 
   .reviews__title {
     order: 1;
+    margin-bottom: 49px;
   }
+
+  .blog__text {
+    margin-bottom: 58px;
+  }
+
+  .blog__author {
+    font-size: @base-font-size+1;
+  }
+
 
   .reviews__button-feedback {
     order: 2;
@@ -1334,23 +1412,32 @@ body {
     order: 4;
     width: 167px;
     position: absolute;
-    right: 50px;
-    bottom: 105px;
+    right: 57px;
+    bottom: 0;
   }
 
   .reviews__button {
     border: none;
   }
 
-  .contacts__title::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/icon-flag.svg");
-    background-repeat: no-repeat;
-    width: 70px;
-    height: 85px;
-    right: 0;
-    top: 0;
+  .contacts {
+    padding-top: 80px;
+    margin-bottom: 55px;
+  }
+
+  .contacts__title {
+    margin-bottom: 50px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon-flag.svg");
+      background-repeat: no-repeat;
+      width: 70px;
+      height: 85px;
+      right: -20px;
+      top: -14px;
+    }
   }
 
   .address {
@@ -1359,10 +1446,21 @@ body {
 
   .address__tbody {
     display: flex;
+    font-size: @base-font-size;
+  }
+
+  .address__table-row:nth-child(1) {
+    margin-right: 25px;
   }
 
   .address__table-value {
-    width: 215px;
+    width: 230px;
+  }
+
+  .contacts__wrapper {
+    margin: 0 auto;
+    padding: 0 50px;
+    width: 668px;
   }
 
   .contacts__button-feedback {
@@ -1371,20 +1469,16 @@ body {
     margin: 0 auto;
   }
 
-  .contacts {
-    margin-bottom: 55px;
-  }
-
   .page-footer__wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-top: 34px;
   }
 
   .map {
     position: relative;
-    margin-bottom: 33px;
-    margin-left: -300px;
-    margin-right: -300px; /* подумать!!! */
+    margin-bottom: 61px;
   }
 
   .copyright {
@@ -1402,7 +1496,12 @@ body {
   }
 
   .catalog__item {
-    margin-bottom: 50px;
+    margin-bottom: 44px;
+  }
+
+  .card-product__img {
+    width: 335px; /* для сетки */
+    height: 335px;  /* для сетки */
   }
 
   .card-product__link,
@@ -1410,8 +1509,12 @@ body {
     text-decoration: none;
   }
 
+  .card-product__link {
+    margin-bottom: 5px;
+  }
+
   .card-product__img-link {
-    margin-right: 28px;
+    margin-right: 23px;
   }
 
   .card-product {
@@ -1423,7 +1526,7 @@ body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    padding-top: 30px;
+    padding-top: 24px;
   }
 
   .card-product__price-wrap {
@@ -1432,6 +1535,7 @@ body {
     align-items: center;
     margin-top: auto;
     margin-right: 30px;
+    margin-left: 5px;
     border-top: 1px solid @color-border;
   }
 
@@ -1461,11 +1565,16 @@ body {
   }
 
   .card-product__title {
+    width: 235px;
     margin: 0;
     font-size: 20px;
     line-height: @base-line-height;
     font-weight: @bold;
     color: black;
+  }
+
+  .video-blog {
+    margin-bottom: 60px;
   }
 
   .video-blog__wrap {
@@ -1486,15 +1595,22 @@ body {
   .video-blog__title {
     order: 2;
     margin: 0;
-    padding: 0;
+    padding: 15px 103px;
     font-size: 20px;
     line-height: @base-line-height;
     font-weight: @bold;
+
+    &::before {
+      top: 9px;
+      left: 39px;
+    }
   }
 
   .video-blog__text {
     order: 3;
     margin: 0;
+    margin-bottom: 21px;
+    padding: 15px 38px;
     font-size: 15px;
     line-height: 30px;
     font-weight: 400;
@@ -1503,6 +1619,8 @@ body {
 
   .video-blog__button {
     order: 4;
+    margin: 0 42px;
+    margin-bottom: 47px;
     color: @color-text;
     font-size: @base-font-size;
     line-height: 16px;
@@ -1593,7 +1711,7 @@ body {
   }
 }
 
-@media (min-width: @desktop-width) {
+@media (min-width: @desktop-width) {   /* DESKTOP  */
   .main-nav {
     width: 1050px;
     .padding-desktop;
@@ -1614,25 +1732,29 @@ body {
     font-size: 15px;
   }
 
+  .menu-desktop .menu__link {
+    padding: 22px 0;
+  }
+
   .menu {
     order: 1;
     display: flex;
     flex-wrap: wrap;
-    width: 360px;
+    width: 440px;
     font-size: @base-font-size;
   }
 
   .menu__item {
-    width: 175px;
+    width: 220px;
   }
 
   .menu__link {
-    padding: 30px 8px;
+    padding: 30px 0;
   }
 
   .main-nav__logo-link {
     order: 2;
-    width: 100px;
+    width: 165px;
   }
 
   .menu-user {
@@ -1664,18 +1786,25 @@ body {
   .goods-week {
     width: 1050px;
     .padding-desktop;
+    padding-top: 51px;
     .center;
     margin-bottom: 140px;
   }
 
   .goods-week__mark {
     order: 1;
-    margin: 0 auto;
+    padding-left: 23px;
   }
 
   .goods-week__title {
     order: 2;
     width: 878px;
+    font-size: @base-font-size+36;
+    line-height: @base-line-height+29;
+  }
+
+  .goods-week__description {
+    margin-bottom: 47px;
   }
 
   .goods-week__flex-wrap {
@@ -1685,14 +1814,14 @@ body {
 
   .goods-week__img {
     order: 4;
-    margin-top: -82px;
+    margin-top: -156px;
     z-index: -1;
     width: 525px; /* для сетки */
     height: 638px; /* для сетки*/
   }
 
   .goods-week__order {
-    margin-top: -164px;
+    margin-top: -125px;
     order: 5;
     width: 293px;
     padding-left: 175px;
@@ -1702,32 +1831,58 @@ body {
     width: 1050px;
     .padding-desktop;
     .center;
-    margin-bottom: 80px;
+    margin-bottom: 44px;
+  }
+
+  .about__title {
+    font-size: @base-font-size+36;
+    line-height: @base-line-height+29;
+    padding-top: 14px;
   }
 
   .about__title,
   .about__list {
-    padding-left: 175px;
+    padding-left: 172px;
+  }
+
+  .about__item--flower,
+  .about__item--money,
+  .about__item--heart {
+    margin-right: 32px;
   }
 
   .reviews {
     width: 1050px;
-    .padding-desktop;
+    padding: 0;
+    padding-top: 72px;
     .center;
-    margin-bottom: 80px;
+    margin-bottom: 150px;
   }
 
   .reviews__title {
-    padding-left: 70px;
+    padding-left: 172px;
+    font-size: @base-font-size+36;
+    line-height: @base-line-height+29;
   }
 
   .reviews-slider {
     width: 785px;
-    padding-left: 70px;
+    padding-left: 175px;
+  }
+
+  .reviews__button-feedback {
+    padding: 15px 38px;
+    margin-top: 6px;
+  }
+
+  .blog__text {
+    font-size: @base-font-size;
+    line-height: @base-line-height+6;
+    margin-bottom: 41px;
   }
 
   .reviews__navigation {
-    right: 96px;
+    right: 4px;
   }
 
   .contacts {
@@ -1735,18 +1890,25 @@ body {
     flex-wrap: wrap;
     width: 1050px;
     .padding-desktop;
+    padding-top: 148px;
     .center;
     margin-bottom: 80px;
   }
 
-  .contacts__title::before {
-    left: -100px;
+  .contacts__title {
+    font-size: @base-font-size+36;
+    line-height: @base-line-height+29;
+
+      &::before {
+    left: -107px;
+    top: -10px;
+    }
   }
 
   .contacts__wrapper {
     box-sizing: border-box;
     width: 525px;
-    padding-left: 175px;
+    padding-left: 171px;
     display: flex;
     flex-direction: column;
   }
@@ -1755,15 +1917,35 @@ body {
     flex-direction: column;
   }
 
+  .address__table-col {
+    padding-right: 11px;
+  }
+
+  .address__table-row:nth-child(1) {
+    margin-right: 0;
+  }
+
   .map {
     width: 525px;
     margin: 0;
+    margin-top: -73px;
   }
 
   .contacts__button-feedback {
     margin: 0;
     margin-left: 175px;
-    margin-top: -50px;
+    margin-top: -52px;
+  }
+
+  .page-footer__wrapper {
+    width: 1050px;
+    padding: 32px 100px;
+    margin: 0 auto;
+  }
+
+  .social__list {
+    border: none;
+    padding: 0;
   }
 
   /* каталог */
@@ -1775,20 +1957,48 @@ body {
     .center;
   }
 
+  .catalog {
+    padding-top: 52px;
+    margin-bottom: 23px;
+  }
+
   .catalog__list {
     display: flex;
   }
 
   .catalog__item {
-    margin-right: 30px;
+    margin-right: 47px;
   }
 
   .card-product {
     flex-direction: column;
   }
 
+  .card-product__options {
+    margin-bottom: 42px;
+  }
+
+  .card-product__options--position {
+    margin-bottom: 17px;
+  }
+
+  .card-product__img {
+    width: 317px;   /*  для сетки */
+    height: 468px; /*  для сетки */
+  }
+
   .card-product__img-link {
     margin-right: 0;
+  }
+
+  .card-product__flex-wrap {
+    padding-top: 13px;
+    margin-left: 25px;
+  }
+
+  .video-blog__item {
+    width: 680px;
+    height: 455px;
   }
 
   /* форма */
