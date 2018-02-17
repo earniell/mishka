@@ -12,7 +12,7 @@
     <header class="page-header">
       <nav class="main-nav main-nav--closed">
         <button class="main-nav__toggle" type="button">открыть меню</button>
-        <a class="main-nav__logo-link" href="">
+        <a class="main-nav__logo-link" href="index.html">
           <img class="main-nav__logo" src="img/logo-mobile.svg" width="85" height="35" alt="логотип магазина вязанных вещей «Мишка»">
         </a>
         <ul class="main-nav__list menu">
@@ -47,13 +47,13 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="page-title page-title--color">
+      <section class="page-title page-title--color page-title--position">
         <a class="page-title__link delivery">
           <p class="delivery__text">Бесплатная доставка по России</p>
         </a>
         <h1 class="page-main__title">Каталог товаров</h1>
       </section>
-      <section class="catalog">
+      <section class="catalog catalog--position">
         <ul class="catalog__list">
           <li class="catalog__item">
             <article class="card-product">
@@ -66,7 +66,7 @@
                 </a>
                 <p class="card-product__options">Рост 30 см, вес 200 г</p>
                 <div class="card-product__price-wrap">
-                  <p class="card-product__price">1200 руб.</p>
+                  <p class="card-product__price">1 200 руб.</p>
                   <a class="card-product__price-link" href="#">Добавить в корзину</a>
                 </div>
               </div>
@@ -98,9 +98,9 @@
                 <a class="card-product__link">
                   <h3 class="card-product__title">Большая корзинка для игрушек</h3>
                 </a>
-                <p class="card-product__options">Диаметр 30 см, высота 30 см</p>
+                <p class="card-product__options card-product__options--position ">Диаметр 30 см, высота 30 см</p>
                 <div class="card-product__price-wrap">
-                  <p class="card-product__price">1500 руб.</p>
+                  <p class="card-product__price">1 500 руб.</p>
                   <a class="card-product__price-link" href="#">Добавить в корзину</a>
                 </div>
               </div>
@@ -110,12 +110,14 @@
       </section>
       <section class="video-blog">
         <div class="video-blog__wrap">
-          <h2 class="video-blog__title">Процесс производства</h2>
-          <div class="video-blog__item">
+          <div class="video-blog__source">
             <div class="video-blog__control"></div>
           </div>
+          <div class="video-blog__info">
+          <h2 class="video-blog__title">Процесс производства</h2>
           <p class="video-blog__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-          <a class="button video-blog__link" href="#">Сделать заказ</a>
+          <a class="button video-blog__button" href="#">Сделать заказ</a>
+        </div>
         </div>
       </section>
       </div>
@@ -143,8 +145,9 @@
         </ul>
       </section>
       <section class="page-footer__item copyright">
-        <h2 class="copyright__title">Разработано</h2>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" width="" height="" alt="логотип HTML academy">HTML academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <h2 class="copyright__title">Разработано</h2>
+          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="логотип HTML academy">HTML academy</a>
       </section>
       </div>
     </footer>

@@ -12,7 +12,7 @@
     <header class="page-header">
       <nav class="main-nav main-nav--closed">
         <button class="main-nav__toggle" type="button">открыть меню</button>
-        <a class="main-nav__logo-link" href="">
+        <a class="main-nav__logo-link" href="index.html">
           <img class="main-nav__logo" src="img/logo-mobile.svg" width="85" height="35" alt="логотип магазина вязанных вещей «Мишка»">
         </a>
         <ul class="main-nav__list menu">
@@ -47,7 +47,7 @@
       </nav>
     </header>
     <main class="page-main">
-      <section class="page-title page-title--color">
+      <section class="page-title page-title--color page-title--position">
         <a class="page-title__link delivery">
           <p class="delivery__text">Бесплатная доставка по России</p>
         </a>
@@ -124,14 +124,14 @@
           </fieldset>
           <fieldset class="form__item form__item--color-grey">
             <div class="form__flex-wrap">
-              <legend class="form__name">Тел</legend>
+              <legend class="form__name phone">Тел</legend>
               <input class="form__text" type="tel" name="phone" placeholder="+7 XXX XX XX*" pattern="/+7 [0-9]{3} [0-9]{3} [0-9]{2} [0-9]{2}" required> <!-- проблема с pattern -->
             </div>
           </fieldset>
-          <fieldset class="form__item form__item--color-grey">
-            <div class="form__flex-wrap">
-              <legend class="form__name">E-mail</legend>
-              <input class="form__text" type="email" name="e-mail" placeholder="Ваш e-mail*" required>
+          <fieldset class="form__item form__item--color-grey form__item--position">
+            <div class="form__flex-wrap form__flex-wrap--position">
+              <legend class="form__name email">E-mail</legend>
+              <input class="form__text" type="email" name="e-mail" placeholder="Ваш Email*" required>
             </div>
           </fieldset>
           <fieldset class="form__item additional">
@@ -171,8 +171,9 @@
         </ul>
       </section>
       <section class="page-footer__item copyright">
-        <h2 class="copyright__title">Разработано</h2>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><img src="img/logo-htmlacademy.svg" width="" height="" alt="логотип HTML academy">HTML academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <h2 class="copyright__title">Разработано</h2>
+          <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="логотип HTML academy">HTML academy</a>
       </section>
       </div>
     </footer>
