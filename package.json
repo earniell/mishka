@@ -11,7 +11,7 @@
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "7.0.x",
     "@htmlacademy/editorconfig-cli": "1.x",
-    "stylelint": "8.4.x",
+    "stylelint": "15.10.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
